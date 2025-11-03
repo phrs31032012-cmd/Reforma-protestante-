@@ -1,0 +1,59 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class TesesHTML {
+    public static void main(String[] args) {
+        String[] teses = new String[95];
+
+        teses[0] = "1. Quando nosso Senhor e Mestre Jesus Cristo disse 'Arrependei-vos', ele quis que toda a vida dos fiéis fosse de arrependimento.";
+        teses[1] = "2. Esta palavra não pode ser entendida como referindo-se a sacramentos externos, tais como a penitência, etc., mas a um arrependimento interior do coração.";
+        teses[2] = "3. A penitência verdadeira consiste na mudança contínua da vida e do coração.";
+        teses[3] = "4. Aquele que não se arrepende verdadeiramente não pode ser salvo, nem a penitência exterior ajuda.";
+        teses[4] = "5. O Papa não tem poder para perdoar pecados, apenas pode declarar o perdão que vem de Deus.";
+        teses[5] = "6. Nenhum líder humano pode apagar a culpa do pecado; o perdão pertence somente a Deus.";
+        teses[6] = "7. A penitência interior é mais valiosa do que atos externos.";
+        teses[7] = "8. As indulgências não substituem o arrependimento verdadeiro.";
+        teses[8] = "9. O tesouro da Igreja é o Evangelho de Jesus Cristo, não ouro ou bens materiais.";
+        teses[9] = "10. A fé genuína produz boas obras, mas as obras não compram a salvação.";
+
+        // As Teses 11–95 podem ser adicionadas na mesma lógica
+        teses[10] = "11. O Papa deve usar sua riqueza para ajudar os pobres, e não construir templos luxuosos.";
+        teses[11] = "12. A verdadeira penitência é interior, não comprada com dinheiro.";
+        teses[12] = "13. O Papa deve ensinar o Evangelho verdadeiro, e não prometer indulgências em troca de dinheiro.";
+        teses[13] = "14. As indulgências podem dar falsa segurança aos fiéis e não garantem a salvação.";
+        teses[14] = "15. A Igreja deve orientar os fiéis com a Palavra de Deus, não com promessas falsas.";
+        teses[15] = "16. Nenhum homem pode comprar a remissão dos pecados por ouro.";
+        teses[16] = "17. O arrependimento verdadeiro leva à mudança de vida e à fé sincera.";
+        teses[17] = "18. As indulgências podem desviar os fiéis da fé verdadeira em Cristo.";
+        teses[18] = "19. A salvação não depende de atos externos, mas da graça de Deus.";
+        teses[19] = "20. A pregação deve ensinar a necessidade de arrependimento interior e fé.";
+
+        // Para simplificação aqui, completaremos com placeholders de 21 a 95
+        for (int i = 20; i < 95; i++) {
+            teses[i] = (i + 1) + ". [Conteúdo da tese " + (i + 1) + "]";
+        }
+
+        // Criar arquivo HTML
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("95_Teses.html"))) {
+            writer.write("<!DOCTYPE html>\n<html>\n<head>\n<meta charset='UTF-8'>\n");
+            writer.write("<title>As 95 Teses de Martinho Lutero</title>\n");
+            writer.write("<style>\nbody{font-family: Arial, sans-serif; margin:20px; line-height:1.5;}\nh1{text-align:center;}\nul{list-style-type: decimal;}\n</style>\n");
+            writer.write("</head>\n<body>\n");
+
+            writer.write("<h1>As 95 Teses de Martinho Lutero — O Início da Reforma Protestante</h1>\n");
+            writer.write("<p><em>Um resumo histórico e explicativo das 95 teses que mudaram o rumo da fé cristã</em></p>\n");
+
+            writer.write("<ul>\n");
+            for (String tese : teses) {
+                writer.write("<li>" + tese + "</li>\n");
+            }
+            writer.write("</ul>\n");
+
+            writer.write("</body>\n</html>");
+            System.out.println("Arquivo HTML gerado com sucesso!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
