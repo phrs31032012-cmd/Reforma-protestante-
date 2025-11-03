@@ -2,17 +2,15 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class TesesDeLutero {
-
+public class TeseLutero {
     public static void main(String[] args) {
-
         String[] teses = {
-            "1ª Tese: Dizendo nosso Senhor e Mestre Jesus Cristo: Arrependei-vos...., certamente quer que toda a vida dos seus crentes na terra seja contínuo arrependimento.",
+            "1ª Tese: Dizendo nosso Senhor e Mestre Jesus Cristo: Arrependei-vos..., certamente quer que toda a vida dos seus crentes na terra seja contínuo arrependimento.",
             "2ª Tese: E esta expressão não pode e não deve ser interpretada como referindo-se ao sacramento da penitência, isto é, à confissão e satisfação, a cargo do ofício dos sacerdotes.",
             "3ª Tese: Todavia não quer que apenas se entenda o arrependimento interno; o arrependimento interno nem mesmo é arrependimento quando não produz toda sorte de modificações da carne.",
             "4ª Tese: Assim sendo, o arrependimento e o pesar, isto é, a verdadeira penitência, perdura enquanto o homem se desagradar de si mesmo, a saber, até a entrada desta para a vida eterna.",
             "5ª Tese: O papa não quer e não pode dispensar outras penas, além das que impôs ao seu alvitre ou em acordo com os cânones, que são estatutos papais.",
-            "6ª Tese: O papa não pode perdoar divida senão declarar e confirmar aquilo que Já foi perdoado por Deus; ou então faz nos casos que lhe foram reservados. Nestes casos, se desprezados, a dívida deixaria de ser em absoluto anulada ou perdoada.",
+            "6ª Tese: O papa não pode perdoar dívida senão declarar e confirmar aquilo que já foi perdoado por Deus; ou então faz nos casos que lhe foram reservados.",
             "7ª Tese: Deus a ninguém perdoa a dívida sem que ao mesmo tempo o subordine, em sincera humildade, ao sacerdote, seu vigário.",
             "8ª Tese: Canones poenitendiales, que não as ordenanças de prescrição da maneira em que se deve confessar e expiar, apenas aio Impostas aos vivos, e, de acordo com as mesmas ordenanças, não dizem respeito aos moribundos.",
             "9ª Tese: Eis porque o Espírito Santo nos faz bem mediante o papa, excluído este de todos os seus decretos ou direitos o artigo da morte e da necessidade suprema.",
@@ -102,3 +100,21 @@ public class TesesDeLutero {
             "93ª Tese: A indulgência deve levar à conversão, não à complacência.",
             "94ª Tese: O amor de Deus é mais valioso do que qualquer tesouro material.",
             "95ª Tese: A verdadeira fé e arrependimento são o caminho seguro para a salvação."
+        };
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("teses.html"))) {
+            writer.write("<html><head><title>95 Teses de Lutero</title>");
+            writer.write("<style>");
+            writer.write("body { " +
+                         "background-color: #fdf6e3; " +
+                         "background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); " +
+                         "font-family: 'Georgia', serif; " +
+                         "padding: 50px; " +
+                         "} " +
+                         "h1 { " +
+                         "font-size: 120px; " +
+                         "text-align: center; " +
+                         "margin-bottom: 50px; " +
+                         "color: #5b3a29; " +
+                         "} " +
+                         "li p { font-size: 100px;
